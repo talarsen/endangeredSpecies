@@ -30,6 +30,9 @@ CREATE TABLE public.tasks (
 );
 
 
+
+
+
 --
 -- Name: tasks_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --

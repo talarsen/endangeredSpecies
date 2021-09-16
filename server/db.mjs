@@ -1,6 +1,17 @@
+/* eslint-disable prettier/prettier */
 import dotenv from "dotenv";
 import pgp from "pg-promise";
+//Responsible for data access to the PostgreSQL database. The code in this file:
 
+// Sets up a database client connection.
+// Provides functions that interact with the database.
+
+
+// addSighting will be a post. 
+// getSightings (query get all sightings and join )
+export const getSightings = async () => await db.any("SELECT *, nickname FROM sightings JOIN individuals ON sightings.individual_id = individuals.id");
+
+//drop down menu get request to get the list of possible indivduals that were seen. c
 const db = initDb();
 
 export const getTasks = async () => await db.any("SELECT * FROM tasks");
