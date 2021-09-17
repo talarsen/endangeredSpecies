@@ -17,16 +17,24 @@ const ListSightings = () => {
 
   return (
     <>
+    <header className="container-fluid">
+          <div
+            className='p-2  bg-image' 
+            style={{ backgroundImage: "url('https://tinyurl.com/yz4ubc2e')", width: "auto", height: 600,backgroundPosition: "center",backgroundRepeat: "no-repeat"}}>
+          </div>
+
+    </header>
       <h1 className="mt-5">Sightings List</h1>
-      <table className="table mt-5">
+      <table className="table table-striped mt-5">
         <thead className="table m-auto thead-dark">
           <tr>
-            <th>Individual Id</th>
-            <th>Nickname</th>
-            <th>Date Sighted</th>
-            <th>Location Sighted</th>
-            <th>Healthy</th>
-            <th>Sighter Email</th>
+            <th scope="col">Individual Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Nickname</th>
+            <th scope="col">Date Sighted</th>
+            <th scope="col">Location Sighted</th>
+            <th scope="col">Healthy</th>
+            <th scope="col">Sighter Email</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +42,7 @@ const ListSightings = () => {
           {sightings.map((sighting) => (
             <tr key={sighting.id}>
               <td>{sighting.individual_id}</td>
+              <td>{sighting.name}</td>
               <td>{sighting.nickname}</td>
               <td>{sighting.date_of_sighting}</td>
               <td>{sighting.location}</td>
