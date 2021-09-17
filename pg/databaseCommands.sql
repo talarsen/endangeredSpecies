@@ -56,4 +56,8 @@ CREATE TABLE sightings (
     FOREIGN KEY (individual_id) REFERENCES individuals(id)
 );
 
-INSERT INTO sightings(date_of_sighting, location, healty, email_of_sighter) VALUES('2021-01-09', 'American River', true, 'user1@gmail.com', 1);
+INSERT INTO sightings(date_of_sighting, location, healty, email_of_sighter) VALUES('2021-01-09', 'American River', true, 'user1@gmail.com');
+
+INSERT INTO sightings(date_of_sighting, location, healty, email_of_sighter, individual_id) VALUES('2021-08-08', 'Desolation Wilderness', false, 'user2@gmail.com', 3);
+
+INSERT INTO sightings(date_of_sighting, location, healty, email_of_sighter, individual_id) VALUES('2021-08-08', 'Lassen National park', true, 'user3@gmail.com', 5);

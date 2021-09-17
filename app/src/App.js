@@ -1,7 +1,8 @@
-/* eslint-disable prettier/prettier */
-// eslint-disable-next-line import/order
 import * as React from "react";
+
+import AddSighting from "./AddSighting.js";
 import ListSightings from "./ListSightings";
+
 // import { Routes, Route, Link } from "react-router-dom";
 
 //import * as apiClient from "./apiClient";
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <>
       <ListSightings />
+      <AddSighting />
     </>
   );
 };
