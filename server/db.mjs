@@ -10,8 +10,15 @@ import pgp from "pg-promise";
 // getSightings (query get all sightings and join )
 export const getSightings = async () =>
   await db.any(
-    "SELECT *, nickname FROM sightings JOIN individuals ON sightings.individual_id = individuals.id",
+    "SELECT *, nickname, name FROM sightings JOIN individuals ON sightings.individual_id = individuals.id",
   );
+
+  export const addSighting = async (name,) =>
+  (
+    await db.any("INSERT INTO sightings(name) VALUES($1) RETURNING id, name", [
+      name,
+    ])
+  )[0];
 
 //drop down menu get request to get the list of possible indivduals that were seen. c
 const db = initDb();
